@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { closeSideBar } from '../utils/headerSlice';
 import { API_KEY } from '../utils/constant';
 import { useSearchParams } from 'react-router-dom';
+import CommentsContainer from './CommentsContainer';
 
 
 const WatchPage = () => {
@@ -51,8 +52,12 @@ const WatchPage = () => {
 
     return (
       <div className='mx-10 mt-3'>
-      {<iframe width="1000" height="600" src={`https://www.youtube.com/embed/${searchParams.get("v")}`}title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>}
-      
+        <div>
+           {<iframe width="1000" height="600" src={`https://www.youtube.com/embed/${searchParams.get("v")}`}title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>}
+        </div>
+        <div> 
+          <CommentsContainer/>
+        </div>
       </div>
     )
 }

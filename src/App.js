@@ -30,7 +30,7 @@ const AppRouter= createBrowserRouter([
 function App() {
   return (
     <Provider store={store}>
-    <div>
+    <div >
       <Head/>
       <RouterProvider router={AppRouter}/>
     </div>
