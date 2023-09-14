@@ -16,13 +16,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "production": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "npm run production",
     "deploy": "gh-pages -d build"
-
   },
+  
   "eslintConfig": {
     "extends": [
       "react-app",
